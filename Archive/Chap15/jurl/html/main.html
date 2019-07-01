@@ -1,0 +1,24 @@
+<div id="shortURLForm"> 
+<div id="topmatter">
+$MESSAGES$$ERRORS$
+</div>
+<h1> $pageTitle$ </h1>
+<form name="shortURLForm" method="post" action="$SELF$">
+    <p>Target URL: <span class="small"> Target URL must be a complete URL, e.g., <b>http://bw.org/</b> </span> </p>
+    <input type="text" name="targetURL" value="$targetURL$"><br/>
+    <p>Short URL token: <span class="small"> Short URL token is the token only, e.g., <b>bw</b> </span></p>
+    <input type="text" name="shortURL" value="$shortURL$" /><br/>
+    <input class="formSubmit" type="submit" value="Add Record" />
+    &nbsp;&nbsp;<input class="formSubmit" type="submit" name="generate" value="Generate Hash" />
+$hiddens$
+</form>
+<div id="reclist">
+<h1> URLs in the database </h1>
+$CONTENT$
+</div>
+</div>
+
+<!-- set the focus to the testimonial field -->
+<script language="javascript">
+    document.shortURLForm.targetURL.focus();
+</script>

@@ -1,0 +1,3 @@
+SetEnv PATH /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+RewriteEngine On
+RewriteRule ^([A-Za-z0-9-]+)/?$ jurl.cgi?u=$1 [L]

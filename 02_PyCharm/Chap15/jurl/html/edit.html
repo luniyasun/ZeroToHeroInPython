@@ -1,0 +1,20 @@
+<div id="shortURLForm"> 
+<div id="topmatter">
+$MESSAGES$$ERRORS$
+</div>
+<h1> $pageTitle$ </h1>
+<form method="post" action="$SELF$" name="shortURLForm">
+    <p>Target URL: </p>
+    <input type="text" name="targetURL" value="$targetURL$"><br/>
+    <p>Short URL: </p>
+    <input type="text" name="shortURL" value="$shortURL$" disabled /><br/>
+    <input type="submit" name="update" value="Update Record" />
+    <input type="submit" name="cancel" value="Cancel" />
+$hiddens$
+</form>
+</div>
+
+<!-- set the focus to the testimonial field -->
+<script language="javascript">
+    document.shortURLForm.targetURL.focus();
+</script>
