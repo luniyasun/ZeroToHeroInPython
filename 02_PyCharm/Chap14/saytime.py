@@ -108,14 +108,14 @@ class saytime(numwords):
         elif h > 12: h -= 12
 
         # hword is the hours word)
-        if h is 0: hword = self._specials['midnight']
-        elif h is 12: hword = self._specials['noon']
+        if h == 0: hword = self._specials['midnight']
+        elif h == 12: hword = self._specials['noon']
         else: hword = self.numwords(h)
 
-        if m is 0:
+        if m == 0:
             if h in (0, 12): return hword   # for noon and midnight
             else: return "{} {}".format(self.numwords(h), self._words['quarters'][m])
-        if m % 15 is 0:
+        if m % 15 == 0:
             return "{} {} {}".format(self._words['quarters'][m // 15], sign, hword) 
         return "{} {} {}".format(self.numwords(m), sign, hword) 
 
